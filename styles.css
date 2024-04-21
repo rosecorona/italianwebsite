@@ -155,4 +155,15 @@ footer {
     clear: both;
     display: table;
 }
+}h1 {
+    text-align: center; /
+    text-decoration: underline; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}menu-title {
+    text-align: center; 
+    text-decoration: underline; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    font-size: 3rem; 
 }

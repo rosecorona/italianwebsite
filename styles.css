@@ -1,19 +1,86 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Tangerine', cursive, sans-serif; /* This is a Google font that looks rustic */
+    line-height: 1.6;
+    color: #333;
 }
 
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: #555;
-    clear: left;
-    text-align: center;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif; /* This font has a rustic vibe */
 }
 
-nav .navbar-nav a {
+/* Navigation */
+nav {
+    background-color: #fff; /* White background for the navbar */
+}
+
+nav .navbar-nav .nav-link {
+    color: #008000; /* Green text for the nav links */
     margin-right: 15px;
 }
 
+nav .navbar-nav .nav-link:hover {
+    color: #ff0000; /* Red text on hover for a nice effect */
+}
+
+/* Main Content */
 .container {
-    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #008000; /* Green background for the header */
+    color: #fff; /* White text in the header */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #444; /* Darker background for the footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/* Utility classes */
+.text-red {
+    color: #ff0000; /* Red text color */
+}
+
+.bg-red {
+    background-color: #ff0000; /* Red background color */
+}
+
+.bg-green {
+    background-color: #008000; /* Green background color */
+}
+
+.bg-white {
+    background-color: #fff; /* White background color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .navbar-nav {
+        text-align: center;
+    }
+}
 }

@@ -83,30 +83,76 @@ img {
         text-align: center;
     }
 }
-}/*/* Menu headings */
-h1, h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem; /* Adjust the size as needed */
+body {
+    font-family: 'Tangerine', cursive, sans-serif; /* Or another font that you prefer */
+    background-color: #fff; /* Or any color you want */
+    color: #000; /* Or any color you want */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    max-width: 768px; /* Or the width you prefer */
+    margin: 0 auto;
+    padding: 2rem;
+    border: 5px double #000; /* For the double line */
+}
+
+header h1, header h2, header h3 {
+    text-align: center;
     margin-bottom: 0.5rem;
 }
 
-/* Menu items */
-ul {
-    font-size: 1.5rem; /* Adjust the size as needed */
-    list-style-type: none; /* Removes bullet points */
+header h1 {
+    font-size: 3rem; /* Large font size for the restaurant name */
 }
 
-/* Menu item descriptions */
-.menu-description {
-    font-size: 1.2rem; /* Adjust the size as needed */
-    color: #666;
-    margin-top: 0.25rem;
-    line-height: 1.4; /* This increases the space between lines of text */
+header h2 {
+    font-size: 2.5rem; /* Smaller font size for 'Italian Restaurant' */
 }
 
-/* General paragraph styling, if needed */
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+header h3 {
+    font-size: 2rem; /* Smaller font size for 'Cena' */
     margin-bottom: 1rem;
+}
+
+.menu-section h4 {
+    font-size: 1.8rem; /* Font size for section titles like 'Antipasti' */
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+/* Style for each menu item */
+.menu-item {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-title {
+    font-weight: bold;
+}
+
+.menu-item-price {
+    float: right;
+    font-weight: bold;
+}
+
+.menu-item-description {
+    display: block; /* or 'inline-block' depending on layout */
+    margin-bottom: 0.25rem;
+}
+
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 }

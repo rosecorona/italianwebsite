@@ -186,7 +186,7 @@ footer {
 
 .overlay-text {
     color: white; /* Adjust text color as needed */
-    font-size: 1.5rem; /* Adjust font size as needed */
+    font-size: 2rem; /* Adjust font size as needed */
     opacity: 0;
     transition: opacity 0.5s;
     z-index: 2;

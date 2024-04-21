@@ -204,4 +204,22 @@ footer {
 /* Ensure text doesn't show unless hovered */
 .image-link:hover .overlay-text {
     display: flex;
+}/* New Top Header Styles */
+.top-header {
+    background-color: #008000; /* A green background */
+    color: white; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5rem; /* Large font size for the header */
+    font-family: 'Cinzel', serif; /* Assuming you want to use the Cinzel font here */
+}
+
+/* Adjust the Existing Header Row if needed */
+header {
+    padding-top: 20px; /* Add padding to move it down */
+}
+
+/* Bottom Font Size Increase */
+footer p, .overlay-text {
+    font-size: 1.5rem; /* Increased font size */
 }

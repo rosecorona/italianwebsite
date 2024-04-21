@@ -10,9 +10,10 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff; /* Background color for the body */
-    margin: 0;
+     margin: 0;
     padding: 0;
-    height: 100%; /* Make sure the html and body take up full viewport height */
+    height: 100%;
+    width: 100%;
 }
 
 /* Typography */
@@ -50,21 +51,22 @@ nav .navbar-nav .nav-link:hover {
 
 /* Header */
 .top-header {
-    background-color: #008000; /* Green background for the new top header */
-    color: white; /* White text in the header */
+     background-color: #008000; /* Green background */
+    color: white; /* White text */
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem 0; /* Adjust padding as needed */
     font-size: 2.5rem; /* Large font size for the header */
+    font-family: 'Cinzel', serif;
 }
 
 /* Images & Links Container */
-.image-links-container {
+..image-links-container {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch; /* Stretch the child links to fill the container */
-    height: calc(100vh - 60px); /* Adjust '60px' to the actual height of your .top-header */
     margin: 0;
     padding: 0;
+    height: calc(100vh - var(--top-header-height)); /* Use a CSS variable for the top header height */
+    width: 100%;
+}
 }
 
 /* Style for individual image links */
@@ -119,17 +121,17 @@ footer {
     display: table;
 }
 
-/* Responsive Design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    nav .navbar-nav {
-        text-align: center;
-    }
-
     .image-links-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack images on smaller screens */
     }
 
     .image-link {
-        width: 100%; /* Full width for mobile */
-        height: auto; /* Auto height for mobile */
+        height: 33vh; /* Each image takes a third of the viewport height */
     }
+
+    :root {
+        --top-header-height: 100px; /* Increase the header height if needed on smaller screens */
+    }
+}

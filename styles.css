@@ -83,14 +83,30 @@ img {
         text-align: center;
     }
 }
-}/* Menu Items */
-ul {
-    font-size: 1.25rem; /* Increase the font size of all list items */
+}/*/* Menu headings */
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem; /* Adjust the size as needed */
+    margin-bottom: 0.5rem;
 }
 
-/* Menu Item Descriptions */
+/* Menu items */
+ul {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    list-style-type: none; /* Removes bullet points */
+}
+
+/* Menu item descriptions */
 .menu-description {
-    font-size: 1rem; /* Set font size for descriptions */
-    color: #666; /* A softer color for the description text */
-    margin-top: 0.25rem; /* Add a little space between the item name and its description */
+    font-size: 1.2rem; /* Adjust the size as needed */
+    color: #666;
+    margin-top: 0.25rem;
+    line-height: 1.4; /* This increases the space between lines of text */
+}
+
+/* General paragraph styling, if needed */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }

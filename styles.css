@@ -6,21 +6,32 @@
 }
 
 body {
-    font-family: 'Tangerine', cursive, sans-serif; 
+    font-family: 'Tangerine', cursive, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #fff; /* Background color for the body */
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make sure the html and body take up full viewport height */
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     color: #444;
-    margin-bottom: 1rem;
     font-family: 'Cinzel', serif; /* This font has a rustic vibe */
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem; /* Large font size for titles */
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* Navigation */
 nav {
     background-color: #fff; /* White background for the navbar */
+    padding-top: 20px; /* Add padding to move it down */
 }
 
 nav .navbar-nav .nav-link {
@@ -38,145 +49,31 @@ nav .navbar-nav .nav-link:hover {
 }
 
 /* Header */
-header {
-    background-color: #008000; /* Green background for the header */
-    color: #fff; /* White text in the header */
+.top-header {
+    background-color: #008000; /* Green background for the new top header */
+    color: white; /* White text in the header */
+    text-align: center;
     padding: 20px 0;
-    text-align: center;
+    font-size: 2.5rem; /* Large font size for the header */
 }
 
-/* Footer */
-footer {
-    background-color: #444; /* Darker background for the footer */
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    border: 0;
-}
-
-/* Utility classes */
-.text-red {
-    color: #ff0000; /* Red text color */
-}
-
-.bg-red {
-    background-color: #ff0000; /* Red background color */
-}
-
-.bg-green {
-    background-color: #008000; /* Green background color */
-}
-
-.bg-white {
-    background-color: #fff; /* White background color */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav .navbar-nav {
-        text-align: center;
-    }
-}
-body {
-    font-family: 'Tangerine', cursive, sans-serif; /* Or another font that you prefer */
-    background-color: #fff; /* Or any color you want */
-    color: #000; /* Or any color you want */
+/* Images & Links Container */
+.image-links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Stretch the child links to fill the container */
+    height: calc(100vh - 60px); /* Adjust '60px' to the actual height of your .top-header */
     margin: 0;
     padding: 0;
 }
 
-.menu-container {
-    max-width: 768px; /* Or the width you prefer */
-    margin: 0 auto;
-    padding: 2rem;
-    border: 5px double #000; /* For the double line */
-}
-
-header h1, header h2, header h3 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-
-header h1 {
-    font-size: 3rem; /* Large font size for the restaurant name */
-}
-
-header h2 {
-    font-size: 2.5rem; /* Smaller font size for 'Italian Restaurant' */
-}
-
-header h3 {
-    font-size: 2rem; /* Smaller font size for 'Cena' */
-    margin-bottom: 1rem;
-}
-
-.menu-section h4 {
-    font-size: 1.8rem; /* Font size for section titles like 'Antipasti' */
-    margin-top: 1rem;
-    text-decoration: underline;
-}
-
-/* Style for each menu item */
-.menu-item {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-}
-
-.menu-item-title {
-    font-weight: bold;
-}
-
-.menu-item-price {
-    float: right;
-    font-weight: bold;
-}
-
-.menu-item-description {
-    display: block; /* or 'inline-block' depending on layout */
-    margin-bottom: 0.25rem;
-}
-
-footer {
-    font-size: 0.8rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-}h1 {
-    text-align: center; /
-    text-decoration: underline; 
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}menu-title {
-    text-align: center; 
-    text-decoration: underline; 
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-    font-size: 3rem; 
-}.image-links-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
+/* Style for individual image links */
 .image-link {
     width: 30%; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
     background-size: cover;
     background-position: center;
+    flex: 1; /* Each image link will take up equal space */
     position: relative;
     display: flex;
     align-items: center;
@@ -185,8 +82,8 @@ footer {
 }
 
 .overlay-text {
-    color: white; /* Adjust text color as needed */
     font-size: 2rem; /* Adjust font size as needed */
+    color: white; /* Adjust text color as needed */
     opacity: 0;
     transition: opacity 0.5s;
     z-index: 2;
@@ -204,22 +101,35 @@ footer {
 /* Ensure text doesn't show unless hovered */
 .image-link:hover .overlay-text {
     display: flex;
-}/* New Top Header Styles */
-.top-header {
-    background-color: #008000; /* A green background */
-    color: white; /* White text */
+}
+
+/* Footer */
+footer {
+    background-color: #444; /* Darker background for the footer */
+    color: #fff;
     text-align: center;
     padding: 10px 0;
-    font-size: 2.5rem; /* Large font size for the header */
-    font-family: 'Cinzel', serif; /* Assuming you want to use the Cinzel font here */
-}
-
-/* Adjust the Existing Header Row if needed */
-header {
-    padding-top: 20px; /* Add padding to move it down */
-}
-
-/* Bottom Font Size Increase */
-footer p, .overlay-text {
     font-size: 1.5rem; /* Increased font size */
 }
+
+/* Clearfix for floated elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .navbar-nav {
+        text-align: center;
+    }
+
+    .image-links-container {
+        flex-direction: column;
+    }
+
+    .image-link {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Auto height for mobile */
+    }

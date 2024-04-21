@@ -149,7 +149,7 @@ footer {
     margin-top: 2rem;
 }
 
-/* Clearfix for floated elements */
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -166,4 +166,42 @@ footer {
     margin-top: 20px; 
     margin-bottom: 20px; 
     font-size: 3rem; 
+}.image-links-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.image-link {
+    width: 30%; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.overlay-text {
+    color: white; /* Adjust text color as needed */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 2;
+}
+
+.image-link:hover .overlay-text {
+    opacity: 1;
+}
+
+/* Fallback background color for when images are not found */
+.image-link {
+    background-color: #ccc;
+}
+
+/* Ensure text doesn't show unless hovered */
+.image-link:hover .overlay-text {
+    display: flex;
 }

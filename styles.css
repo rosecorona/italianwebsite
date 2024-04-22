@@ -92,24 +92,6 @@ footer {
     font-style: italic;
 }
 
-/* Style adjustments for smaller screens */
-@media (max-width: 768px) {
-    .image-section {
-        height: calc((100vh - var(--header-footer-total-height)) / 3); /* Each section takes one-third of the height */
-    }
-    .menu-container {
-        padding: 1rem;
-    }
-    .menu-section h2 {
-        text-align: center;
-    }
-    .menu-item {
-        margin-bottom: 1rem;
-    }
-    .menu-item-title {
-        text-align: center;
-    }
-	
 .story-container {
     background-color: #fff;
     padding: 2rem;
@@ -146,17 +128,28 @@ img.img-fluid {
 
 /* Style adjustments for smaller screens */
 @media (max-width: 768px) {
-    .story-container {
+    .image-section {
+        height: calc((100vh - var(--header-footer-total-height)) / 3); /* Each section takes one-third of the height */
+    }
+
+    .menu-container, .story-container {
         padding: 1rem;
     }
-    .story-title {
-        font-size: 2.5rem;
+
+    .menu-section h2, .story-title {
+        text-align: center;
     }
-    .story-text {
-        font-size: 1rem;
+
+    .menu-item, .story-text {
+        margin-bottom: 1rem;
     }
-    .btn-primary {
+
+    .menu-item-title, .btn-primary {
+        text-align: center;
         width: 100%;
+    }
+
+    .btn-primary {
         padding: .8rem;
         font-size: 1.25rem;
     }

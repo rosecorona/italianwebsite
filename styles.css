@@ -109,3 +109,55 @@ footer {
     .menu-item-title {
         text-align: center;
     }
+	
+.story-container {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.story-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-text {
+    font-family: 'Tangerine', cursive;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    background-color: #008000; /* Adjust the button color to match your design */
+    border: none;
+}
+
+/* Adjust image padding and border for aesthetics */
+img.img-fluid {
+    border: 3px solid #ddd; /* Optional border for the image */
+    padding: 5px; /* Space between border and image */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+/* Style adjustments for smaller screens */
+@media (max-width: 768px) {
+    .story-container {
+        padding: 1rem;
+    }
+    .story-title {
+        font-size: 2.5rem;
+    }
+    .story-text {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        width: 100%;
+        padding: .8rem;
+        font-size: 1.25rem;
+    }
+}

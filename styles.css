@@ -33,3 +33,6 @@ footer {
         height: 33vh; /* Adjust height on smaller screens */
     }
 }
+.image-section {
+    height: 300px; /* This is just for testing purposes */
+}

@@ -27,12 +27,49 @@ footer {
     font-family: 'Cinzel', serif;
 }
 
-/* Add Bootstrap's breakpoints for responsiveness */
-@media (max-width: 991.98px) { 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0; /* Remove padding to allow full width */
+    margin-top: -56px; /* Adjust based on your header's height */
+    height: calc(100vh - 56px); /* Adjust based on your header's height */
+}
+
+.row {
+    margin-right: 0; /* Remove default right margin for rows */
+    margin-left: 0; /* Remove default left margin for rows */
+}
+
+.image-section {
+    background-size: cover;
+    background-position: center;
+    height: 33.33%; /* Each image section will take up one-third of the container height */
+}
+
+@media (max-width: 768px) {
     .image-section {
-        height: 33vh; /* Adjust height on smaller screens */
+        height: calc((100vh - 56px) / 3); /* Adjust the height for smaller screens */
+		
+.overlay-text {
+    color: white;
+    font-size: 2rem; /* Adjust as necessary */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    z-index: 10;
+}
+
+.image-section {
+    /* ... other styles ... */
+    cursor: pointer;
+    position: relative; /* Ensure that position context is set for absolute children */
+}
+
+.image-section:hover .overlay-text {
+    opacity: 1;
     }
 }
-.image-section {
-    height: 300px; /* This is just for testing purposes */
 }

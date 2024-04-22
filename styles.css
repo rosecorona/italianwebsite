@@ -59,21 +59,24 @@ html, body {
 		
 .overlay-text {
     color: white;
-    font-size: 2rem; /* Adjust as necessary */
+    font-size: 4rem; /* Adjust to your preference */
+    font-family: 'Tangerine', cursive; /* This is the cursive font you included */
     opacity: 0;
     transition: opacity 0.5s ease;
     text-align: center;
     z-index: 10;
-}
-
-.image-section {
-    /* ... other styles ... */
-    cursor: pointer;
-    position: relative; /* Ensure that position context is set for absolute children */
+    margin: 0; /* Reset any default margins */
+    width: 100%; /* Ensure the text spans the full width of its container */
+    height: 100%; /* Ensure the text spans the full height of its container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline from links */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the text for readability */
+    transition: background-color 0.5s ease; /* Smooth transition for background-color */
 }
 
 .image-section:hover .overlay-text {
     opacity: 1;
-    }
-}
+    background-color: rgba(0, 0, 0, 0); /* Clear background on hover if desired */
 }

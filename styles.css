@@ -16,14 +16,14 @@ html, body {
 }
 
 .top-header {
-    background-color: #008000; /* Adjust the color to match your design */
+    background-color: #008000;
     color: white;
     font-family: 'Cinzel', serif;
 }
 
 .container-fluid {
     padding: 0; /* Remove padding for full width */
-    height: calc(100vh - var(--header-footer-total-height)); /* Height is the full viewport height minus the header and footer */
+    height: calc(100vh - var(--header-footer-total-height));
 }
 
 .row {
@@ -38,24 +38,24 @@ html, body {
 
 .overlay-text {
     color: white;
-    font-size: 4rem; /* Larger font size */
-    font-family: 'Tangerine', cursive; /* Cursive, rustic font */
+    font-size: 4rem;
+    font-family: 'Tangerine', cursive;
     opacity: 0;
-    transition: opacity 0.5s ease, background-color 0.5s ease; /* Smooth transitions */
+    transition: opacity 0.5s ease, background-color 0.5s ease;
     text-align: center;
     z-index: 10;
-    width: 100%; /* Span the full width */
-    height: 100%; /* Span the full height */
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none; /* No underlines */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .image-section:hover .overlay-text {
     opacity: 1;
-    background-color: transparent; /* Remove background color on hover */
+    background-color: transparent;
 }
 
 footer {
@@ -64,11 +64,7 @@ footer {
     font-family: 'Cinzel', serif;
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .image-section {
-        height: calc((100vh - var(--header-footer-total-height)) / 3); /* Each section takes one-third of the height */
-    }
+/* Menu Styles */
 .menu-container {
     background-color: #fff;
     padding: 2rem;
@@ -98,18 +94,18 @@ footer {
 
 /* Style adjustments for smaller screens */
 @media (max-width: 768px) {
+    .image-section {
+        height: calc((100vh - var(--header-footer-total-height)) / 3); /* Each section takes one-third of the height */
+    }
     .menu-container {
         padding: 1rem;
     }
-
     .menu-section h2 {
         text-align: center;
     }
-
     .menu-item {
         margin-bottom: 1rem;
     }
-
     .menu-item-title {
         text-align: center;
     }

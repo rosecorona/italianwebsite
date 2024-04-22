@@ -12,13 +12,16 @@ html, body {
 }
 
 :root {
-    --header-footer-total-height: 120px; /* Adjust this to your header and footer */
+    --header-footer-total-height: 240px; 
 }
 
 .top-header {
-    background-color: #008000;
-    color: white;
-    font-family: 'Cinzel', serif;
+    background-color: #008000; 
+    color: white; 
+    font-family: 'Cinzel', serif; 
+    text-align: center;
+    padding: 20px 0; 
+    font-size: 32px; /
 }
 
 .container-fluid {

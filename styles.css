@@ -185,17 +185,21 @@ footer {
 
 .overlay-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center based on element's own size */
+    color: white; /* Text color */
+    font-size: 48px;
     opacity: 0;
-    transition: opacity 0.5s ease;
-    text-align: center;
+    transition: opacity 0.5s ease; /* Smooth transition for the opacity */
+    background-color: transparent; /* Ensures no background color is applied */
+    border: none; /* Removes any borders */
+    padding: 0; /* Removes padding */
+    width: auto; /* Auto width based on content */
+    height: auto; /* Auto height based on content */
+    text-align: center; /* Centers text horizontally */
 }
 
 .image-section:hover .overlay-text {
-    opacity: 1;
-}
+    opacity: 1; /* Makes text visible on hover */
 }

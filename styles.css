@@ -182,7 +182,9 @@ footer {
     position: relative;
     overflow: hidden;
 }
-
+.image-section, .image-section * {
+    background-color: transparent !important; /* Override any other background settings */
+}
 .overlay-text {
     position: absolute;
     top: 50%; /* Centers vertically */

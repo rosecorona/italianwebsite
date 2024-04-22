@@ -5,8 +5,14 @@
     box-sizing: border-box;
 }
 
-body, html {
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-footer-total-height: 120px; /* Adjust this to your header and footer */
 }
 
 .top-header {
@@ -15,10 +21,41 @@ body, html {
     font-family: 'Cinzel', serif;
 }
 
+.container-fluid {
+    padding: 0; /* Remove padding for full width */
+    height: calc(100vh - var(--header-footer-total-height)); /* Height is the full viewport height minus the header and footer */
+}
+
+.row {
+    height: 100%; /* Full height of its parent */
+}
+
 .image-section {
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 100%; /* Full height of its parent */
+}
+
+.overlay-text {
+    color: white;
+    font-size: 4rem; /* Larger font size */
+    font-family: 'Tangerine', cursive; /* Cursive, rustic font */
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.5s ease; /* Smooth transitions */
+    text-align: center;
+    z-index: 10;
+    width: 100%; /* Span the full width */
+    height: 100%; /* Span the full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* No underlines */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+}
+
+.image-section:hover .overlay-text {
+    opacity: 1;
+    background-color: transparent; /* Remove background color on hover */
 }
 
 footer {
@@ -27,56 +64,9 @@ footer {
     font-family: 'Cinzel', serif;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.container-fluid {
-    height: calc(100vh - var(--header-footer-total-height)); /* Calculate the height dynamically */
-}
-
-.row {
-    height: 100%;
-}
-
-.image-section {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-
-:root {
-    --header-footer-total-height: 120px; 
-}
-}
-
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .image-section {
-        height: calc((100vh - 56px) / 3); /* Adjust the height for smaller screens */
-		
-.overlay-text {
-    color: white;
-    font-size: 4rem; /* Adjust to your preference */
-    font-family: 'Tangerine', cursive; /* This is the cursive font you included */
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    text-align: center;
-    z-index: 10;
-    margin: 0; /* Reset any default margins */
-    width: 100%; /* Ensure the text spans the full width of its container */
-    height: 100%; /* Ensure the text spans the full height of its container */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none; /* Remove underline from links */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the text for readability */
-    transition: background-color 0.5s ease; /* Smooth transition for background-color */
-}
-
-.image-section:hover .overlay-text {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0); /* Clear background on hover if desired */
+        height: calc((100vh - var(--header-footer-total-height)) / 3); /* Each section takes one-third of the height */
+    }
 }

@@ -30,23 +30,27 @@ footer {
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .container-fluid {
-    padding: 0; /* Remove padding to allow full width */
-    margin-top: -56px; /* Adjust based on your header's height */
-    height: calc(100vh - 56px); /* Adjust based on your header's height */
+    height: calc(100vh - var(--header-footer-total-height)); /* Calculate the height dynamically */
 }
 
 .row {
-    margin-right: 0; /* Remove default right margin for rows */
-    margin-left: 0; /* Remove default left margin for rows */
+    height: 100%;
 }
 
 .image-section {
+    height: 100%;
     background-size: cover;
     background-position: center;
-    height: 33.33%; /* Each image section will take up one-third of the container height */
+}
+
+
+:root {
+    --header-footer-total-height: 120px; 
+}
 }
 
 @media (max-width: 768px) {
